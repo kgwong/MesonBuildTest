@@ -4,5 +4,6 @@
 int main()
 {
     say();
+	std::cin.ignore();
 	return 0;
 }
