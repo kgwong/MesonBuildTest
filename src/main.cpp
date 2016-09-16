@@ -1,7 +1,7 @@
 #include <iostream>
 #include "say.h"
 
-#include "useless_header.h"
+#include "subdir/useless_header.h"
 
 int main()
 {

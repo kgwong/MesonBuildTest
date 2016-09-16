@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import os
+import glob
 import sys
 
 if len(sys.argv) != 2:
@@ -9,6 +9,5 @@ if len(sys.argv) != 2:
 
 input_ext = sys.argv[1]
 
-for file in os.listdir():
-    if file.endswith(input_ext):
-        print(file)
+for file in glob.glob('./**/*' + input_ext, recursive=True):
+    print(file)
