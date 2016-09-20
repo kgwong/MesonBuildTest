@@ -8,5 +8,7 @@ else
     all_cpps = windows_list_all_cpps_command.stdout().strip().split('\n')
 endif
 
+gtest = subproject('gtest')
+sdl = subproject('sdl2')
 
-executable('hello-world.exe', all_cpps) 
+executable('hello-world.exe', all_cpp, dependencies : [gtest, sdl])
